@@ -12,7 +12,7 @@ class Education(models.Model):
         gpa (DecimalField): the grade point average attained in my tenure at the institution
         coursework (TextField): some of the courses taken at the institution
     '''
-    Degrees = models.TextChoices("Degrees", "Associate Bachelor's Master's PhD")
+    Degrees = models.TextChoices("Degrees", "Associate Bachelor\'s Master\'s PhD")
     institution = models.CharField(max_length=25)
     credential = models.CharField(max_length=10, choices=Degrees.choices)
     major = models.CharField(max_length=15)
